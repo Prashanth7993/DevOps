@@ -7,7 +7,7 @@
 echo "Enter the String: "
 read -r Str
 
-echo " $Str " | tr '[:lower:]' '[:upper:]'
+echo " $Str " |  tr '[:lower:]' '[:upper:]'
  
 
 
