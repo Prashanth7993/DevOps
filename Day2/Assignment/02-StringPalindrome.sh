@@ -14,5 +14,5 @@ done
 if [ $Str == $rev ]; then
     echo "It is a palindrome"
 else
-    echo "It is not a palindrome"
+    echo  "It is not a palindrome"
 fi
