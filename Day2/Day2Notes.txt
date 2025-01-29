@@ -1,2 +1,6 @@
 29/01/2025 -Notes
-1.How Do you write functions in shell script?
+[] -> used for conditions.
+1.How Do you write functions in shell script? [001-CreatingFunction.sh]
+2.Write function with parameter?  [002-FunctionWithParameter.sh]
+3.Writing linux command in shell script?  [003-newFile.sh]
+
