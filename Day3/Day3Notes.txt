@@ -1,0 +1,14 @@
+30/01/2025
+Write a shell script to clone a git repo and deploy maven based java application on tomcat.
+1. Downloard tomcat
+    Unzip
+        webapps
+        bin
+2.write shell script
+    input: git repo
+    clone the repo
+    get iniside
+    mvn clean package
+        targetfolder -war file
+        copy *.war to webapps of tomcat
+        $tomcat/bin/catalina.bat start
