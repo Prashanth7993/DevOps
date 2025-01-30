@@ -11,4 +11,4 @@ Write a shell script to clone a git repo and deploy maven based java application
     mvn clean package
         targetfolder -war file
         copy *.war to webapps of tomcat
-        $tomcat/bin/catalina.bat start
+        $tomcat/bin/catalina.bat  start
