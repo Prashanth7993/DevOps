@@ -4,7 +4,9 @@
 # Usage: ./git-clone.sh
 
 # Define repository and target directories
-REPO_LINK="git@github.com:vilasvarghese/docker-k8s.git"  # Replace with the actual Git repository link
+echo "Please Provide the github repo link: "
+read -n REPO
+REPO_LINK="$REPO"  # Replace with the actual Git repository link
 TARGET_DIR="C:/Users/Administrator/ShellScripting/Day3/Repository1"  # Replace with the desired directory
 TOMCAT_HOME="C:\apache-tomcat-10.1.34"  # Set path to your Tomcat installation
 JAVA_HOME="C:\Program Files\Java\jdk-11.0.15.1"
