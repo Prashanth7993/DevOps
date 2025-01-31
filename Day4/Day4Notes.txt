@@ -2,7 +2,7 @@
 
 1.What is Powershell?
 
-Commands:
+    Commands:
         $PSVersionTable
         Get-Host
         $env:COMPUTERNAME
@@ -13,6 +13,45 @@ Commands:
         $env:HomePath
         $env:ProgramFiles
         Get-Verb
+        Get-Process
+        Get-ExecutionPolicy
+        Set-ExecutionPolicy -ExecutionPolicy "Unrestriced"
+        Write-Host "Hello !" ( or ) Write-host "Hello !"
+        $myvar=12, $myvar
+        $myvar.GetType()
+        $myvar.gettype()
+        $myvar | get-member
+        $myvar.gethashcode()
+        $myvar.length
+        $myvar.conatins("1")
+        $myvar.conatins("H")
+        $myvar.conatins("0")
+        [System.Int32] $my_int=23
+        $my_int="12"
+        [System.Int32] $my_int="12"
+        "Hello!".ToUpper()
+        $my_int -gt 5 ( or ) $my_int -gt5
+        $my_int -lt 5
+        $my_int -ge 5
+        $my_int++
+        $my_int--
+        write-host $your_int, $my_int
+        $your_int -eq $my_int
+        $pwd
+        $host
+        $pid ( or ) $PID
+        ls
+        ls | get-member
+        ls.gettype()
+        get-childitem | where-object {$_.name -Like "*.ssh"}
+        clear-variable -name my_int
+        $my_int -eq $NULL
+        
+
+
+
+        
+
 
 
         
