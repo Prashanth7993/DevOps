@@ -1,0 +1,18 @@
+31/01/2025
+
+1.What is Powershell?
+
+Commands:
+        $PSVersionTable
+        Get-Host
+        $env:COMPUTERNAME
+        $env:USERNAME
+        $env:USERPROFILE
+        $env:ALLUSERPROFILE
+        $env:ComSpec
+        $env:HomePath
+        $env:ProgramFiles
+        Get-Verb
+
+
+        
