@@ -1,0 +1,10 @@
+john.doe@gmail.com
+random123@yahoo.com
+test.email@gmail.com
+hello.world@outlook.com
+sample-user@gmail.com
+info@company.com
+another.test123@gmail.com
+fake.email123@rediffmail.com
+admin@website.org
+myemail@gmail.com
