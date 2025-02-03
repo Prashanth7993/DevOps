@@ -33,3 +33,23 @@ for (( i=1; i<10; i++));
 do
     echo "$i"
 done
+
+echo "all arguments combined together $*"
+echo "no. of arguments $#"
+echo "first $1"
+echo "expands all the command line on separate words $@"
+echo "ProcessId of the current process $$"
+ 
+sleep 400 &
+echo "ProcessId of the recently background process $!"
+echo "file name of the current programm $0"
+
+
+set -x
+set `date`
+echo "Today is $1"
+echo "Month is $2"
+echo "Date is $3"
+echo "Year is $4"
+echo "Time is $5"
+echo "AM/PM is $6"
