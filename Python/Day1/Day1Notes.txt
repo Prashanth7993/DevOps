@@ -2,3 +2,28 @@
 1.What is python.
     Advantages & DisAdvantages
 2.How it is Differnet From Other Language.
+3.Function
+    1.len
+4.Datatypes
+    1.Strings
+    2.Int
+    3.Float
+    4.Double
+    5.Complex
+    6.Dict
+    7.Set
+    8.Tuple
+
+5.Operators
+    1.& / and
+    2.or
+    3.not
+    4.>
+    5.>=
+    6.<
+    7.<=
+    8.**
+
+
+
+

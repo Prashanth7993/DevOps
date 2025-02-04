@@ -71,9 +71,6 @@ area = length*width
 #print([3<=2])
 
 
-#Strings#
-
-
 
 
 
