@@ -1,0 +1,647 @@
+user@user-Virtual-Machine:~$ cat > file.txt
+bash: file.txt: Permission denied
+user@user-Virtual-Machine:~$ cat >file.txt
+bash: file.txt: Permission denied
+user@user-Virtual-Machine:~$ cat >file1.txt
+Hiii welcome
+^C
+user@user-Virtual-Machine:~$ cat file1.txt
+Hiii welcome
+user@user-Virtual-Machine:~$ cat >file1.txt
+giii
+^C
+user@user-Virtual-Machine:~$ cat file1.txt
+giii
+user@user-Virtual-Machine:~$ cat >>file1.txt
+gudmorning^C
+user@user-Virtual-Machine:~$ cat file1.txt
+giii
+user@user-Virtual-Machine:~$ cat file.txt
+cat: file.txt: Permission denied
+user@user-Virtual-Machine:~$ cat >>file1.txt
+good mormi 
+^C
+user@user-Virtual-Machine:~$ cat file1.txt
+giii
+good mormi
+user@user-Virtual-Machine:~$ cat file.txt file2.txt > file3.txt
+cat: file.txt: Permission denied
+cat: file2.txt: No such file or directory
+user@user-Virtual-Machine:~$ cat file.txt file1.txt > file3.txt
+cat: file.txt: Permission denied
+user@user-Virtual-Machine:~$ cat file.txt file1.txt > file3.txt
+cat: file.txt: Permission denied
+user@user-Virtual-Machine:~$ cat file.txt
+cat: file.txt: Permission denied
+user@user-Virtual-Machine:~$ ls
+Desktop    file1.txt  get-docker.sh  Public     test1.txt  text2.txt
+Documents  file3.txt  Music          snap       test2.txt  Videos
+Downloads  file.txt   Pictures       Templates  test.txt
+user@user-Virtual-Machine:~$ cat file.txt
+cat: file.txt: Permission denied
+user@user-Virtual-Machine:~$ cat file1.txt
+giii
+good mormi
+user@user-Virtual-Machine:~$ cat "Doojfngirn" >> file.txt
+bash: file.txt: Permission denied
+user@user-Virtual-Machine:~$ 
+
+---------------------x---------------------
+
+
+user@user-Virtual-Machine:~$ ls
+Desktop    Downloads  file3.txt  get-docker.sh  Pictures  snap       test1.txt  test.txt   Videos
+Documents  file1.txt  file.txt   Music          Public    Templates  test2.txt  text2.txt
+user@user-Virtual-Machine:~$ cat test1.txt
+Hii
+user@user-Virtual-Machine:~$ cat test2.txt
+hi
+user@user-Virtual-Machine:~$ cp test1.txt test4.txt
+user@user-Virtual-Machine:~$ cat test4.txt
+Hii
+user@user-Virtual-Machine:~$ mkdir luckyday
+user@user-Virtual-Machine:~$ cp test1.txt test10.txt luckyday
+cp: cannot stat 'test10.txt': No such file or directory
+user@user-Virtual-Machine:~$ cp test1.txt test2.txt luckyday
+user@user-Virtual-Machine:~$ cat luckyday/
+cat: luckyday/: Is a directory
+user@user-Virtual-Machine:~$ ls luckyday/
+test1.txt  test2.txt
+user@user-Virtual-Machine:~$ ls
+Desktop    file1.txt  get-docker.sh  Pictures  Templates  test4.txt  Videos
+Documents  file3.txt  luckyday       Public    test1.txt  test.txt
+Downloads  file.txt   Music          snap      test2.txt  text2.txt
+user@user-Virtual-Machine:~$ cp *.txt luckyday/
+cp: cannot open 'file.txt' for reading: Permission denied
+user@user-Virtual-Machine:~$ rm -rf file.txt
+user@user-Virtual-Machine:~$ cp *.txt luckyday/
+user@user-Virtual-Machine:~$ ls luckyday/
+file1.txt  file3.txt  test1.txt  test2.txt  test4.txt  test.txt  text2.txt
+user@user-Virtual-Machine:~$ cp -i *.txt luckyday/
+cp: overwrite 'luckyday/file1.txt'? y
+cp: overwrite 'luckyday/file3.txt'? y
+cp: overwrite 'luckyday/test1.txt'? y
+cp: overwrite 'luckyday/test2.txt'? 
+cp: overwrite 'luckyday/test4.txt'? 
+cp: overwrite 'luckyday/test.txt'? y
+cp: overwrite 'luckyday/text2.txt'? y
+user@user-Virtual-Machine:~$ 
+user@user-Virtual-Machine:~$ cp -v *.txt luckyday/
+'file1.txt' -> 'luckyday/file1.txt'
+'file3.txt' -> 'luckyday/file3.txt'
+'test1.txt' -> 'luckyday/test1.txt'
+'test2.txt' -> 'luckyday/test2.txt'
+'test4.txt' -> 'luckyday/test4.txt'
+'test.txt' -> 'luckyday/test.txt'
+'text2.txt' -> 'luckyday/text2.txt'
+user@user-Virtual-Machine:~$ man cp | grep version
+       --version
+              output version information and exit
+       PLE_BACKUP_SUFFIX.  The version control method may be selected via
+       GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+user@user-Virtual-Machine:~$ man cp | grep -- version
+       --version
+              output version information and exit
+       PLE_BACKUP_SUFFIX.  The version control method may be selected via
+       GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+user@user-Virtual-Machine:~$ cp --version
+cp (GNU coreutils) 8.32
+Copyright (C) 2020 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Torbjorn Granlund, David MacKenzie, and Jim Meyering.
+user@user-Virtual-Machine:~$ cp -u
+cp: missing file operand
+Try 'cp --help' for more information.
+user@user-Virtual-Machine:~$ cd luckyday/
+user@user-Virtual-Machine:~/luckyday$ ls
+file1.txt  file3.txt  test1.txt  test2.txt  test4.txt  test.txt  text2.txt
+user@user-Virtual-Machine:~/luckyday$ ls -ltr
+total 28
+-rw-rw-r-- 1 user user   3 Jan 24 11:47 test2.txt
+-rw-rw-r-- 1 user user   4 Jan 24 11:47 test1.txt
+-rw-rw-r-- 1 user user  16 Jan 24 11:47 file3.txt
+-rw-rw-r-- 1 user user  16 Jan 24 11:47 file1.txt
+-rw-rw-r-- 1 user user  18 Jan 24 11:47 text2.txt
+-rw-rw-r-- 1 user user 563 Jan 24 11:47 test.txt
+-rw-rw-r-- 1 user user   4 Jan 24 11:47 test4.txt
+user@user-Virtual-Machine:~/luckyday$ ls
+file1.txt  file3.txt  test1.txt  test2.txt  test4.txt  test.txt  text2.txt
+user@user-Virtual-Machine:~/luckyday$ echo "Child" >> file1.tct
+user@user-Virtual-Machine:~/luckyday$ cp -uv ../file1.txt file1.txt
+user@user-Virtual-Machine:~/luckyday$ cat file1.txt
+giii
+good mormi
+user@user-Virtual-Machine:~/luckyday$ echo "Child" >> file1.txt
+user@user-Virtual-Machine:~/luckyday$ cp -uv ../file1.txt file1.txt
+user@user-Virtual-Machine:~/luckyday$ cat file1.txt
+giii
+good mormi
+Child
+user@user-Virtual-Machine:~/luckyday$ echo "Parent" >> ../file1.txt file1.txt
+user@user-Virtual-Machine:~/luckyday$ cp -u -v ../file1.txt file1.txt
+'../file1.txt' -> 'file1.txt'
+user@user-Virtual-Machine:~/luckyday$ cat file1.txt
+giii
+good mormi
+Parent file1.txt
+user@user-Virtual-Machine:~/luckyday$ cat file1.txt
+giii
+good mormi
+Parent file1.txt
+user@user-Virtual-Machine:~/luckyday$ echo "Parent" >> ../file1.txt file1.txt
+user@user-Virtual-Machine:~/luckyday$ cp -uv ../file1.txt file1.txt
+'../file1.txt' -> 'file1.txt'
+user@user-Virtual-Machine:~/luckyday$ cat file.txt
+cat: file.txt: No such file or directory
+user@user-Virtual-Machine:~/luckyday$ cat file1.txt
+giii
+good mormi
+Parent file1.txt
+Parent file1.txt
+user@user-Virtual-Machine:~/luckyday$ cd ../
+user@user-Virtual-Machine:~$ ls
+Desktop    file1.txt      luckyday  Public     test1.txt  test.txt
+Documents  file3.txt      Music     snap       test2.txt  text2.txt
+Downloads  get-docker.sh  Pictures  Templates  test4.txt  Videos
+user@user-Virtual-Machine:~$ cat file1.txt
+giii
+good mormi
+Parent file1.txt
+Parent file1.txt
+user@user-Virtual-Machine:~$ cd luckyday/
+user@user-Virtual-Machine:~/luckyday$ ls
+file1.tct  file1.txt  file3.txt  test1.txt  test2.txt  test4.txt  test.txt  text2.txt
+user@user-Virtual-Machine:~/luckyday$ cat file3.txt
+giii
+good mormi
+user@user-Virtual-Machine:~/luckyday$ echo "Parent changed" >>../file3.txt
+user@user-Virtual-Machine:~/luckyday$ cp -uv ../file3.txt
+cp: missing destination file operand after '../file3.txt'
+Try 'cp --help' for more information.
+user@user-Virtual-Machine:~/luckyday$ cp -uv ../file3.txt file3.txt
+'../file3.txt' -> 'file3.txt'
+user@user-Virtual-Machine:~/luckyday$ cat file3.txt
+giii
+good mormi
+Parent changed
+user@user-Virtual-Machine:~/luckyday
+
+----------------------------x----------------------------------------
+
+user@user-Virtual-Machine:~/luckyday$ pwd
+/home/user/luckyday
+user@user-Virtual-Machine:~/luckyday$ cd ../
+user@user-Virtual-Machine:~$ pwd
+/home/user
+user@user-Virtual-Machine:~$ cd lucky
+bash: cd: lucky: No such file or directory
+user@user-Virtual-Machine:~$ cd lucky newfolder
+bash: cd: too many arguments
+user@user-Virtual-Machine:~$ cp lucky newfolder
+cp: cannot stat 'lucky': No such file or directory
+user@user-Virtual-Machine:~$ cp -r lucky newfolder
+cp: cannot stat 'lucky': No such file or directory
+user@user-Virtual-Machine:~$ cp -r luckyday newfolder
+user@user-Virtual-Machine:~$ mkdir folder
+user@user-Virtual-Machine:~$ cp luckyday/*.* folder/
+user@user-Virtual-Machine:~$ ls folder/
+file1.tct  file1.txt  file3.txt  test1.txt  test2.txt  test4.txt  test.txt  text2.txt
+user@user-Virtual-Machine:~$ ls
+Desktop    file1.txt  get-docker.sh  newfolder  snap       test2.txt  text2.txt
+Documents  file3.txt  luckyday       Pictures   Templates  test4.txt  Videos
+Downloads  folder     Music          Public     test1.txt  test.txt
+user@user-Virtual-Machine:~$ cat newfolder
+cat: newfolder: Is a directory
+user@user-Virtual-Machine:~$ cd newfolder/
+user@user-Virtual-Machine:~/newfolder$ ls
+file1.tct  file1.txt  file3.txt  test1.txt  test2.txt  test4.txt  test.txt  text2.txt
+user@user-Virtual-Machine:~/newfolder$ cd ../
+user@user-Virtual-Machine:~$ cd folder
+user@user-Virtual-Machine:~/folder$ ls
+file1.tct  file1.txt  file3.txt  test1.txt  test2.txt  test4.txt  test.txt  text2.txt
+user@user-Virtual-Machine:~/folder$ rm -I *.txt
+rm: remove 7 arguments? y
+user@user-Virtual-Machine:~/folder$ cd ..
+user@user-Virtual-Machine:~$ rm -I *.txt
+rm: remove 7 arguments? y
+user@user-Virtual-Machine:~$ ls
+Desktop    Downloads  get-docker.sh  Music      Pictures  snap       Videos
+Documents  folder     luckyday       newfolder  Public    Templates
+user@user-Virtual-Machine:~$ ls
+Desktop    Downloads  get-docker.sh  Music      Pictures  snap       Videos
+Documents  folder     luckyday       newfolder  Public    Templates
+user@user-Virtual-Machine:~$ rm -d folder
+rm: cannot remove 'folder': Directory not empty
+user@user-Virtual-Machine:~$ rm -df folder
+rm: cannot remove 'folder': Directory not empty
+user@user-Virtual-Machine:~$ cd folder
+user@user-Virtual-Machine:~/folder$ ls
+file1.tct
+user@user-Virtual-Machine:~/folder$ cd ../
+user@user-Virtual-Machine:~$
+
+-----------------x-----------------------
+
+
+user@user-Virtual-Machine:~$ ls
+Desktop    Downloads  folder         luckyday  newfolder  Public  Templates
+Documents  file.txt   get-docker.sh  Music     Pictures   snap    Videos
+user@user-Virtual-Machine:~$ rm -rf file.txt 
+user@user-Virtual-Machine:~$ ls
+Desktop    Downloads  get-docker.sh  Music      Pictures  snap       Videos
+Documents  folder     luckyday       newfolder  Public    Templates
+user@user-Virtual-Machine:~$ echo "this is f1" >> file1.txt
+user@user-Virtual-Machine:~$ ls
+Desktop    Downloads  folder         luckyday  newfolder  Public  Templates
+Documents  file1.txt  get-docker.sh  Music     Pictures   snap    Videos
+user@user-Virtual-Machine:~$ echo "this is f2" >> file2.txt
+user@user-Virtual-Machine:~$ mv file1.txt file2.txt
+user@user-Virtual-Machine:~$ cat file2
+cat: file2: No such file or directory
+user@user-Virtual-Machine:~$ cat file2.txt 
+this is f1
+user@user-Virtual-Machine:~$ 
+
+
+--------------------------------x----------------------------------
+
+
+user@user-Virtual-Machine:~$ ls
+Desktop    Downloads  folder         luckyday  newfolder  Public  Templates
+Documents  file2.txt  get-docker.sh  Music     Pictures   snap    Videos
+user@user-Virtual-Machine:~$ echo "this is f1" >> file1.txt
+user@user-Virtual-Machine:~$ ls
+Desktop    Downloads  file2.txt  get-docker.sh  Music      Pictures  snap       Videos
+Documents  file1.txt  folder     luckyday       newfolder  Public    Templates
+user@user-Virtual-Machine:~$ find . -name file1.txt
+./file1.txt
+./luckyday/file1.txt
+./newfolder/file1.txt
+user@user-Virtual-Machine:~$ find . -name *.txt
+find: paths must precede expression: `file2.txt'
+find: possible unquoted pattern after predicate `-name'?
+user@user-Virtual-Machine:~$ find . -name*.txt
+find: unknown predicate `-name*.txt'
+user@user-Virtual-Machine:~$ find . -name "*.txt"
+./file1.txt
+./file2.txt
+./luckyday/file1.txt
+./luckyday/test1.txt
+./luckyday/file3.txt
+./luckyday/test2.txt
+./luckyday/test4.txt
+./luckyday/test.txt
+./luckyday/text2.txt
+./.cache/tracker3/files/locale-for-miner-apps.txt
+./.cache/tracker3/files/last-crawl.txt
+./.cache/tracker3/files/first-index.txt
+./newfolder/file1.txt
+./newfolder/test1.txt
+./newfolder/file3.txt
+./newfolder/test2.txt
+./newfolder/test4.txt
+./newfolder/test.txt
+./newfolder/text2.txt
+./snap/firefox/common/.mozilla/firefox/serpg00o.default/SiteSecurityServiceState.txt
+./snap/firefox/common/.mozilla/firefox/serpg00o.default/pkcs11.txt
+./snap/firefox/common/.mozilla/firefox/serpg00o.default/AlternateServices.txt
+./snap/firefox/common/.mozilla/firefox/serpg00o.default/serviceworker.txt
+./.thunderbird/ab9nktgg.default-release/encrypted-openpgp-passphrase.txt
+./.thunderbird/ab9nktgg.default-release/SiteSecurityServiceState.txt
+./.thunderbird/ab9nktgg.default-release/pkcs11.txt
+./.thunderbird/ab9nktgg.default-release/AlternateServices.txt
+user@user-Virtual-Machine:~$ find . -name "file1.txt"
+./file1.txt
+./luckyday/file1.txt
+./newfolder/file1.txt
+user@user-Virtual-Machine:~$ find . -iname "File*.txt"
+./file1.txt
+./file2.txt
+./luckyday/file1.txt
+./luckyday/file3.txt
+./newfolder/file1.txt
+./newfolder/file3.txt
+user@user-Virtual-Machine:~$ find . -name "File*.txt"
+user@user-Virtual-Machine:~$ mkdir file
+user@user-Virtual-Machine:~$ ls
+Desktop    Downloads  file1.txt  folder         luckyday  newfolder  Public  Templates
+Documents  file       file2.txt  get-docker.sh  Music     Pictures   snap    Videos
+user@user-Virtual-Machine:~$ find . -iname "file1*" -type f
+./file1.txt
+./luckyday/file1.txt
+./luckyday/file1.tct
+./newfolder/file1.txt
+./newfolder/file1.tct
+./folder/file1.tct
+user@user-Virtual-Machine:~$ find . -iname "file1*"
+./file1.txt
+./luckyday/file1.txt
+./luckyday/file1.tct
+./newfolder/file1.txt
+./newfolder/file1.tct
+./folder/file1.tct
+user@user-Virtual-Machine:~$
+
+
+--------------------------------x---------------------------------
+
+
+user@user-Virtual-Machine:~$ ls -ltr
+total 84
+drwxr-xr-x 2 user user  4096 Dec 24 12:20 Videos
+drwxr-xr-x 2 user user  4096 Dec 24 12:20 Templates
+drwxr-xr-x 2 user user  4096 Dec 24 12:20 Public
+drwxr-xr-x 2 user user  4096 Dec 24 12:20 Pictures
+drwxr-xr-x 2 user user  4096 Dec 24 12:20 Music
+drwxr-xr-x 2 user user  4096 Dec 24 12:20 Downloads
+drwxr-xr-x 2 user user  4096 Dec 24 12:20 Documents
+drwxr-xr-x 2 user user  4096 Dec 24 12:20 Desktop
+drwx------ 4 user user  4096 Dec 24 12:21 snap
+-rw-r--r-- 1 root root 22592 Jan 21 11:45 get-docker.sh
+drwxrwxr-x 2 user user  4096 Jan 24 12:02 luckyday
+drwxrwxr-x 2 user user  4096 Jan 24 13:32 newfolder
+drwxrwxr-x 2 user user  4096 Jan 24 13:38 folder
+-rw-rw-r-- 1 user user    11 Jan 24 13:50 file2.txt
+-rw-rw-r-- 1 user user    11 Jan 24 13:54 file1.txt
+drwxrwxr-x 2 user user  4096 Jan 24 14:00 file
+user@user-Virtual-Machine:~$ find . -name downloads -mtime +7
+user@user-Virtual-Machine:~$ find . -name Downloads -mtime +7
+./Downloads
+user@user-Virtual-Machine:~$ find . -name Downloads -mtime -7
+user@user-Virtual-Machine:~$ find . -name Public -mtime -7
+user@user-Virtual-Machine:~$ find . -name Public -mtime +7
+./Public
+user@user-Virtual-Machine:~$ 
+
+
+--------------------------x--------------------------
+
+user@user-Virtual-Machine:~$ find . -namr "*.*" exec grep "ERROR" {}\;
+find: unknown predicate `-namr'
+user@user-Virtual-Machine:~$ find . -name "*.*" exec grep "ERROR" {}\;
+find: paths must precede expression: `exec'
+user@user-Virtual-Machine:~$ find . -name "*.*" -exec grep "ERROR" {}\;
+find: missing argument to `-exec'
+user@user-Virtual-Machine:~$ find . -name "*.*" -exec grep "ERROR" {} \;
+grep: .: Is a directory
+grep: ./.mozilla: Is a directory
+						echo "ERROR: '$VERSION' not found amongst apt-cache madison results"
+						echo "ERROR: '$VERSION' not found amongst $pkg_manager list results"
+						echo "ERROR: '$VERSION' not found amongst zypper list results"
+					echo "ERROR: Unsupported operating system 'macOS'"
+			echo "ERROR: Unsupported distribution '$lsb_dist'"
+grep: ./.local: Is a directory
+grep: ./.cache: Is a directory
+grep: ./.cache/gstreamer-1.0: Is a directory
+grep: ./.cache/thunderbird/ab9nktgg.default-release: Is a directory
+grep: ./.cache/thunderbird/ab9nktgg.default-release/startupCache/startupCache.8.little: binary file matches
+grep: ./.cache/thunderbird/saw19vsh.default: Is a directory
+grep: ./snap/snapd-desktop-integration/253/.themes: No such file or directory
+grep: ./snap/snapd-desktop-integration/253/.local: Is a directory
+grep: ./snap/snapd-desktop-integration/253/.local/share/glib-2.0: Is a directory
+grep: ./snap/snapd-desktop-integration/253/.config: Is a directory
+grep: ./snap/snapd-desktop-integration/253/.config/gtk-3.0: Is a directory
+grep: ./snap/snapd-desktop-integration/253/.config/gtk-3.0/gtk.css: No such file or directory
+grep: ./snap/snapd-desktop-integration/253/.config/gtk-3.0/settings.ini: No such file or directory
+grep: ./snap/snapd-desktop-integration/253/.config/gtk-2.0: Is a directory
+grep: ./snap/snapd-desktop-integration/253/.config/gtk-2.0/gtkfilechooser.ini: No such file or directory
+grep: ./snap/snapd-desktop-integration/49/.themes: Is a directory
+grep: ./snap/snapd-desktop-integration/49/.local: Is a directory
+grep: ./snap/snapd-desktop-integration/49/.local/share/glib-2.0: Is a directory
+grep: ./snap/snapd-desktop-integration/49/.config: Is a directory
+grep: ./snap/snapd-desktop-integration/49/.config/gtk-3.0: Is a directory
+grep: ./snap/snapd-desktop-integration/49/.config/gtk-3.0/settings.ini: No such file or directory
+grep: ./snap/snapd-desktop-integration/49/.config/gtk-2.0: Is a directory
+grep: ./snap/snapd-desktop-integration/49/.config/gtk-2.0/gtkfilechooser.ini: No such file or directory
+grep: ./snap/snapd-desktop-integration/common/.cache: Is a directory
+grep: ./snap/snapd-desktop-integration/common/.cache/gio-modules/libgiolibproxy.so: No such file or directory
+grep: ./snap/snapd-desktop-integration/common/.cache/gio-modules/libgioenvironmentproxy.so: No such file or directory
+grep: ./snap/snapd-desktop-integration/common/.cache/gio-modules/libgiognutls.so: No such file or directory
+grep: ./snap/snapd-desktop-integration/common/.cache/gio-modules/libdconfsettings.so: No such file or directory
+grep: ./snap/snapd-desktop-integration/common/.cache/gio-modules/libgiognomeproxy.so: No such file or directory
+grep: ./snap/snapd-desktop-integration/common/.cache/immodules/im-thai.so: No such file or directory
+grep: ./snap/snapd-desktop-integration/common/.cache/immodules/im-ibus.so: No such file or directory
+grep: ./snap/snapd-desktop-integration/common/.cache/immodules/im-xim.so: No such file or directory
+grep: ./snap/snapd-desktop-integration/common/.cache/immodules/im-inuktitut.so: No such file or directory
+grep: ./snap/snapd-desktop-integration/common/.cache/immodules/im-viqr.so: No such file or directory
+grep: ./snap/snapd-desktop-integration/common/.cache/immodules/im-broadway.so: No such file or directory
+grep: ./snap/snapd-desktop-integration/common/.cache/immodules/im-ti-er.so: No such file or directory
+grep: ./snap/snapd-desktop-integration/common/.cache/immodules/im-cedilla.so: No such file or directory
+grep: ./snap/snapd-desktop-integration/common/.cache/immodules/im-cyrillic-translit.so: No such file or directory
+grep: ./snap/snapd-desktop-integration/common/.cache/immodules/im-ipa.so: No such file or directory
+grep: ./snap/snapd-desktop-integration/common/.cache/immodules/im-ti-et.so: No such file or directory
+grep: ./snap/snapd-desktop-integration/common/.cache/immodules/im-am-et.so: No such file or directory
+grep: ./snap/snapd-desktop-integration/common/.cache/immodules/im-multipress.so: No such file or directory
+grep: ./snap/snapd-desktop-integration/common/.cache/immodules/im-wayland.so: No such file or directory
+grep: ./snap/snapd-desktop-integration/common/.cache/immodules/im-fcitx.so: No such file or directory
+grep: ./snap/snapd-desktop-integration/common/.cache/immodules/im-waylandgtk.so: No such file or directory
+grep: ./snap/firefox/5647/.themes: Is a directory
+grep: ./snap/firefox/5647/.local: Is a directory
+grep: ./snap/firefox/5647/.local/share/glib-2.0: Is a directory
+grep: ./snap/firefox/5647/.config: Is a directory
+grep: ./snap/firefox/5647/.config/gtk-3.0: Is a directory
+grep: ./snap/firefox/5647/.config/gtk-3.0/gtk.css: No such file or directory
+grep: ./snap/firefox/5647/.config/gtk-3.0/settings.ini: No such file or directory
+grep: ./snap/firefox/5647/.config/gtk-2.0: Is a directory
+grep: ./snap/firefox/5647/.config/gtk-2.0/gtkfilechooser.ini: No such file or directory
+grep: ./snap/firefox/2356/.themes: Is a directory
+grep: ./snap/firefox/2356/.local: Is a directory
+grep: ./snap/firefox/2356/.local/share/glib-2.0: Is a directory
+grep: ./snap/firefox/2356/.config: Is a directory
+grep: ./snap/firefox/2356/.config/gtk-3.0: Is a directory
+grep: ./snap/firefox/2356/.config/gtk-3.0/settings.ini: No such file or directory
+grep: ./snap/firefox/2356/.config/gtk-2.0: Is a directory
+grep: ./snap/firefox/2356/.config/gtk-2.0/gtkfilechooser.ini: No such file or directory
+grep: ./snap/firefox/common/.mozilla: Is a directory
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default: Is a directory
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default/browser-extension-data/amazondotcom@search.mozilla.org: Is a directory
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default/gmp-gmpopenh264/2.3.2: Is a directory
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default/gmp-gmpopenh264/2.3.2/libgmpopenh264.so: binary file matches
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default/storage/default/https+++www.google.com^partitionKey=%28https%2Cdocker.com%29: Is a directory
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default/storage/default/https+++www.mozilla.org: Is a directory
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default/storage/default/https+++github.com: Is a directory
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default/storage/default/https+++chatgpt.com: Is a directory
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default/storage/default/https+++auth.openai.com: Is a directory
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default/storage/default/https+++auth0.openai.com: Is a directory
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default/storage/default/https+++www.googletagmanager.com^partitionKey=%28https%2Cdocker.com%29: Is a directory
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default/storage/default/https+++gemini.google.com: Is a directory
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default/storage/default/https+++www.googletagmanager.com^partitionKey=%28https%2Cgoogle.com%29: Is a directory
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default/storage/default/https+++www.google.com: Is a directory
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default/storage/default/https+++docs.docker.com: Is a directory
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default/storage/default/https+++www.youtube.com^partitionKey=%28https%2Cgoogle.com%29: Is a directory
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default/storage/default/https+++www.youtube.com^partitionKey=%28https%2Cgoogle.com%29/idb/2171031483YattIedMb.files: Is a directory
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default/storage/default/https+++www.youtube.com^partitionKey=%28https%2Cgoogle.com%29/idb/949294363LCo7g%sCD7a%tca7b8afs.files: Is a directory
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default/storage/permanent/chrome/idb/1451318868ntouromlalnodry--epcr.files: Is a directory
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default/storage/permanent/chrome/idb/3561288849sdhlie.files: Is a directory
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default/storage/permanent/chrome/idb/1657114595AmcateirvtiSty.files: Is a directory
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default/storage/permanent/chrome/idb/3870112724rsegmnoittet-es.files: Is a directory
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default/storage/permanent/chrome/idb/2823318777ntouromlalnodry--naod.files: Is a directory
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default/storage/permanent/chrome/idb/2918063365piupsah.files: Is a directory
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default/datareporting/archived/2024-12/1735023289462.b9ea5c68-cea2-43eb-8a1c-1e2a2565ec6d.main.jsonlz4: binary file matches
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default/datareporting/archived/2024-12/1735023289469.dca12b16-c92a-4e80-b7b8-2ff769500ba4.first-shutdown.jsonlz4: binary file matches
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default/datareporting/archived/2025-01/1737443444436.3e6c5e2e-c6c4-4398-9e10-341ab36aa6fd.main.jsonlz4: binary file matches
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default/datareporting/archived/2025-01/1737455457632.063b34b0-8df8-4806-b393-34cfc236b634.main.jsonlz4: binary file matches
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default/datareporting/archived/2025-01/1737608620352.7924c9bf-db73-41e5-82fe-96e98cd2d502.main.jsonlz4: binary file matches
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default/datareporting/archived/2025-01/1737452951903.40a0413e-1bc0-408e-9c53-968d6054f758.main.jsonlz4: binary file matches
+grep: ./snap/firefox/common/.mozilla/firefox/serpg00o.default/datareporting/archived/2025-01/1737433036077.5a294384-4198-4e99-a94f-1c367bbcbde1.main.jsonlz4: binary file matches
+grep: ./snap/firefox/common/.cache: Is a directory
+grep: ./snap/firefox/common/.cache/gio-modules/libgiolibproxy.so: No such file or directory
+grep: ./snap/firefox/common/.cache/gio-modules/libgioenvironmentproxy.so: No such file or directory
+grep: ./snap/firefox/common/.cache/gio-modules/libgiognutls.so: No such file or directory
+grep: ./snap/firefox/common/.cache/gio-modules/libdconfsettings.so: No such file or directory
+grep: ./snap/firefox/common/.cache/gio-modules/libgiognomeproxy.so: No such file or directory
+grep: ./snap/firefox/common/.cache/immodules/im-thai.so: No such file or directory
+grep: ./snap/firefox/common/.cache/immodules/im-ibus.so: No such file or directory
+grep: ./snap/firefox/common/.cache/immodules/im-xim.so: No such file or directory
+grep: ./snap/firefox/common/.cache/immodules/im-inuktitut.so: No such file or directory
+grep: ./snap/firefox/common/.cache/immodules/im-viqr.so: No such file or directory
+grep: ./snap/firefox/common/.cache/immodules/im-broadway.so: No such file or directory
+grep: ./snap/firefox/common/.cache/immodules/im-ti-er.so: No such file or directory
+grep: ./snap/firefox/common/.cache/immodules/im-cedilla.so: No such file or directory
+grep: ./snap/firefox/common/.cache/immodules/im-cyrillic-translit.so: No such file or directory
+grep: ./snap/firefox/common/.cache/immodules/im-ipa.so: No such file or directory
+grep: ./snap/firefox/common/.cache/immodules/im-ti-et.so: No such file or directory
+grep: ./snap/firefox/common/.cache/immodules/im-am-et.so: No such file or directory
+grep: ./snap/firefox/common/.cache/immodules/im-multipress.so: No such file or directory
+grep: ./snap/firefox/common/.cache/immodules/im-wayland.so: No such file or directory
+grep: ./snap/firefox/common/.cache/immodules/im-fcitx.so: No such file or directory
+grep: ./snap/firefox/common/.cache/immodules/im-waylandgtk.so: No such file or directory
+grep: ./snap/firefox/common/.cache/mozilla/firefox/serpg00o.default: Is a directory
+grep: ./snap/firefox/common/.cache/mozilla/firefox/serpg00o.default/startupCache/scriptCache.bin: binary file matches
+grep: ./snap/firefox/common/.cache/mozilla/firefox/serpg00o.default/startupCache/scriptCache-child.bin: binary file matches
+grep: ./snap/firefox/common/.cache/mozilla/firefox/serpg00o.default/startupCache/startupCache.8.little: binary file matches
+grep: ./.thunderbird: Is a directory
+grep: ./.thunderbird/ab9nktgg.default-release: Is a directory
+grep: ./.thunderbird/ab9nktgg.default-release/storage/default/https+++www.mozilla.org: Is a directory
+grep: ./.thunderbird/ab9nktgg.default-release/storage/permanent/chrome/idb/3870112724rsegmnoittet-es.files: Is a directory
+grep: ./.thunderbird/saw19vsh.default: Is a directory
+grep: ./.config: Is a directory
+grep: ./.config/goa-1.0: Is a directory
+grep: ./.config/systemd/user/default.target.wants: Is a directory
+grep: ./.config/gtk-3.0: Is a directory
+
+
+-------------------------x---------------------------
+
+
+user@user-Virtual-Machine:~$ echo "a" >> data1.txt
+user@user-Virtual-Machine:~$ echo "b" >> data1.txt
+user@user-Virtual-Machine:~$ echo "c" >> data1.txt
+user@user-Virtual-Machine:~$ echo "d" >> data1.txt
+user@user-Virtual-Machine:~$ echo "d" >> data1.txt
+user@user-Virtual-Machine:~$ echo "o" >> data1.txt
+user@user-Virtual-Machine:~$ sort data1.txt 
+a
+b
+c
+d
+d
+o
+user@user-Virtual-Machine:~$ echo "p" >> data1.txt
+user@user-Virtual-Machine:~$ echo "e" >> data1.txt
+user@user-Virtual-Machine:~$ sort data1.txt 
+a
+b
+c
+d
+d
+e
+o
+p
+user@user-Virtual-Machine:~$ sort -u data1.txt 
+a
+b
+c
+d
+e
+o
+p
+user@user-Virtual-Machine:~$ sort -r data1.txt 
+p
+o
+e
+d
+d
+c
+b
+a
+user@user-Virtual-Machine:~$ sort -k 2 data1.txt 
+a
+b
+c
+d
+d
+e
+o
+p
+user@user-Virtual-Machine:~$ cat data1.txt 
+a
+b
+c
+d
+d
+o
+p
+e
+user@user-Virtual-Machine:~$ 
+
+
+
+--------------------x-------------------
+
+
+user@user-Virtual-Machine:~$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           392M  1.6M  391M   1% /run
+/dev/sda3       124G   16G  103G  14% /
+tmpfs           2.0G     0  2.0G   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/sda2       512M  6.1M  506M   2% /boot/efi
+tmpfs           392M  144K  392M   1% /run/user/1000
+user@user-Virtual-Machine:~$ df -h | sort -k 1
+/dev/sda2       512M  6.1M  506M   2% /boot/efi
+/dev/sda3       124G   16G  103G  14% /
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           2.0G     0  2.0G   0% /dev/shm
+tmpfs           392M  144K  392M   1% /run/user/1000
+tmpfs           392M  1.6M  391M   1% /run
+tmpfs           5.0M     0  5.0M   0% /run/lock
+user@user-Virtual-Machine:~$ df -h | sort -k 4
+/dev/sda3       124G   16G  103G  14% /
+tmpfs           2.0G     0  2.0G   0% /dev/shm
+tmpfs           392M  1.6M  391M   1% /run
+tmpfs           392M  144K  392M   1% /run/user/1000
+/dev/sda2       512M  6.1M  506M   2% /boot/efi
+tmpfs           5.0M     0  5.0M   0% /run/lock
+Filesystem      Size  Used Avail Use% Mounted on
+user@user-Virtual-Machine:~$ df -h | sort -k 4n
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           2.0G     0  2.0G   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/sda3       124G   16G  103G  14% /
+tmpfs           392M  1.6M  391M   1% /run
+tmpfs           392M  144K  392M   1% /run/user/1000
+/dev/sda2       512M  6.1M  506M   2% /boot/efi
+user@user-Virtual-Machine:~$ df -n | sort -k 4
+df: invalid option -- 'n'
+Try 'df --help' for more information.
+user@user-Virtual-Machine:~$ df -h | sort -k 4
+/dev/sda3       124G   16G  103G  14% /
+tmpfs           2.0G     0  2.0G   0% /dev/shm
+tmpfs           392M  1.6M  391M   1% /run
+tmpfs           392M  144K  392M   1% /run/user/1000
+/dev/sda2       512M  6.1M  506M   2% /boot/efi
+tmpfs           5.0M     0  5.0M   0% /run/lock
+Filesystem      Size  Used Avail Use% Mounted on
+user@user-Virtual-Machine:~$ df -h |sort -k 4 -h
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           5.0M     0  5.0M   0% /run/lock
+tmpfs           392M  1.6M  391M   1% /run
+tmpfs           392M  144K  392M   1% /run/user/1000
+/dev/sda2       512M  6.1M  506M   2% /boot/efi
+tmpfs           2.0G     0  2.0G   0% /dev/shm
+/dev/sda3       124G   16G  103G  14% /
+user@user-Virtual-Machine:~$ 

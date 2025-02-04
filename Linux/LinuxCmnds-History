@@ -1,0 +1,451 @@
+---------------------x--------------------------
+ 1  sudo apt update
+    2  ls
+    3  ls -a
+    4  ls
+    5  clear
+    6  ls
+    7  cd Documents
+    8  ls
+    9  cd ..
+   10  cd Desktop
+   11  ls
+   12  ls -a
+   13  clear
+   14  curl -fsSL https://get.docker.com -o get-docker.sh
+   15  sudo sh get-docker.sh
+   16  Executing docker install script, commit: 7cae5f8b0decc17d6571f9f52eb840fbc13b2737
+   17  <...>
+   18  clear
+   19  sudo su
+   20  exit
+   21  sudo su
+   22  vi 
+   23  vi
+   24  pwd
+   25  date
+   26  dtae
+   27  date
+   28  date +%y-%m-d
+   29  date +%y-%m-%d
+   30  date +%t
+   31  date +%h-%m-%s
+   32  date +%y-%m-%d +%h-%m-%d
+   33  date +%y-%m-%d--+%h-%m-%d
+   34  date +%y-%m-%d/+%h-%m-%s
+   35  date +%y-%m-%d %H-%M-%S
+   36  date +%y-%m-%d--%H:%M:%S
+   37  'date +%y-%m-%d %H:%M:%S'
+   38  date '+%y-%m-%d %H:%M:%S'
+   39  date --set '1511-06-02 12:30:15'
+   40  sudo date 120112012002.129
+   41  sudo date --s="2020-06-02 12:20:15"
+   42  history
+   43  reset
+   44  date
+   45  sudo hwclock
+   46  sudo timectl
+   47  sudo timedatectl
+   48  sudo timedatectl set-time "2025-12-01 3:12:130"
+   49  sudo timedatectl set-time "2025-12-01 3:12:13"
+   50  cal
+   51  sudo cal
+   52  calender
+   53  sudo apt install ncal
+   54  sudo apt update -y && apt install ncal
+   55  cal
+   56  ls
+   57  pwd
+   58  cal
+   59  whoami
+   60  who
+   61  manwho
+   62  man who
+   63  ls *
+   64  ls p*
+   65  ls P*
+   66  ls -d P*
+   67  ls -d P?
+   68  echo "hi" >> test.txt
+   69  echo "hi" >> test1.txt
+   70  echo "hi" >> test2.txt
+   71  ls test?.txt
+   72  ls test?
+   73  ls -d test?
+   74  ls -d test?.txt
+   75  ls test[1-2].txt
+   76  ~
+   77  cd -
+   78  cd ~
+   79  cd -
+   80  ls
+   81  mdir test1.txt
+   82  sudo apt install mtools
+   83  ls
+   84  mdir test1.txt
+   85  rmdir test1.txt
+   86  ls
+   87  mkdir test
+   88  ls
+   89  rmdir test
+   90  ls
+   91  rm -rf test1.txt
+   92  ls
+   93  mkdir test
+   94  ls
+   95  rm -rf test
+   96  ls
+   97  vi test2.txt
+   98  cat test2.txt
+   99  vi test2.txt
+  100  ping ust.com
+  101  ps
+  102  clear
+  103  ps
+  104  ps -ef
+  105  ps -ef bash PID
+  106  ps -ef | grep bash
+  107  ls
+  108  cat test2.txt
+  109  cat get-docker.sh
+  110  clear
+  111  ls
+  112  vi test2.txt
+  113  ls
+  114  echo "hii hello" >> file.txt
+  115  echo "hii " >> file1.txt
+  116  mv file.txt file1.txt
+  117  cat file1.txt 
+  118  ls
+  119  echo "hii " >> file1.txt
+  120  ls
+  121  echo "hii hello" >> file.txt
+  122  ls
+  123  mv file.txt file1.txt
+  124  mv file1.txt file.txt
+  125  ls
+  126  ls
+  127  cat test1.txt
+  128  cat test2.txt
+  129  cp test1.txt test4.txt
+  130  cat test4.txt
+  131  mkdir luckyday
+  132  cp test1.txt test10.txt luckyday
+  133  cp test1.txt test2.txt luckyday
+  134  cat luckyday/
+  135  ls luckyday/
+  136  ls
+  137  cp *.txt luckyday/
+  138  rm -rf file.txt
+  139  cp *.txt luckyday/
+  140  ls luckyday/
+  141  cp -i *.txt luckyday/
+  142  cp -v *.txt luckyday/
+  143  man cp | grep version
+  144  man cp | grep -- version
+  145  cp --version
+  146  cp -u
+  147  cd luckyday/
+  148  ls
+  149  ls -ltr
+  150  ls
+  151  echo "Child" >> file1.tct
+  152  cp -uv ../file1.txt file1.txt
+  153  cat file1.txt
+  154  echo "Child" >> file1.txt
+  155  cp -uv ../file1.txt file1.txt
+  156  cat file1.txt
+  157  echo "Parent" >> ../file1.txt file1.txt
+  158  cp -u -v ../file1.txt file1.txt
+  159  cat file1.txt
+  160  cp -uv ../file1.txt file1.txt
+  161  cat file.txt
+  162  cat file1.txt
+  163  cd ../
+  164  ls
+  165  cat file1.txt
+  166  cd luckyday/
+  167  ls
+  168  cat file3.txt
+  169  echo "Parent changed" >>../file3.txt
+  170  cp -uv ../file3.txt
+  171  cp -uv ../file3.txt file3.txt
+  172  cat file3.txt
+  173  time ls -l
+  174  time ping google.com
+  175  ls
+  176  locate file2.txt
+  177  sudo apt update -y && apt install locate
+  178  locate file2.txt
+  179  sudo apt install plocate
+  180  locate file2.txt
+  181  ls
+  182  ls luckyday/
+  183  locate file3.txt
+  184  lsoff -i tcp
+  185  lsof -i tcp
+  186  ls
+  187  cmp file2.txt data1.txt 
+  188  cat file2.txt
+  189  cat data1.txt 
+  190  diff file2.txt data1.txt 
+  191  mv data1.txt data2.txt
+  192  vi data2.txt 
+  193  diff data1.txt data2.txt
+  194  ls
+  195  cat file2.txt
+  196  cp data2.txt data1.txt
+  197  vi data1.txt
+  198  cmp data1.txt data2.txt
+  199  diff data1.txt data2.txt
+  200  cat data1.txt
+  201  cat data2.txt
+  202  ls
+  203  wc file2.txt
+  204  cat file2.txt
+  205  grep " " /etc/passwd
+  206  echo "Hello world" | tr '[:lower:]' '[:upper:]'
+  207  echo "UST Goblobal" | tr -d 'aeiou'
+  208  echo "UST Goblobal" | tr -d 'aeioU'
+  209  echo "UST Goblobal" | tr -d 'aeiouAEIOU'
+  210  echo "UST GoblEIobal" | tr -d 'aeiouAEIOU'
+  211  echo "UST GoblEIobal" | tr -d 'aeiouAEIOU '
+  212  echo "UST GoblEIobal" | tr -d '[:space:]'
+  213  ls -ltr
+  214  sudo chown root:root data1.txt 
+  215  ls -ltr
+  216  echo "Changin" >> data1.txt
+  217  systemctl
+  218  systemctl status docker
+  219  systemctl stop docker
+  220  systemctl status docker
+  221  docker version
+  222  systemctl start docker
+  223  systemctl status docker
+  224  systemctl disable docker
+  225  systemctl status docker
+  226  sudo systemctl disable docker
+  227  systemctl status docker
+  228  history
+  229  which ls
+  230  ln /usr/bin/ls myls
+  231  sudo ln /usr/bin/ls myls
+  232  myls
+  233  ./myls
+  234  ls -a
+  235  ./myls -a
+  236  ln -s /usr/bin/ls myls1
+  237  myls1
+  238  ./myls1
+  239  ls -i
+  240  ls | tee file2.txt
+  241  ps -aux
+  242  ps -eLf
+  243  crontab -l
+  244  crontab -e
+  245  crontab -l
+  246  ls
+  247  crontab -e
+  248  ls
+  249  pwd
+  250  ls
+  251  tail -f Hello.txt 
+  252  crontab -e
+  253  tail -f Hello.txt 
+  254  crontab -e
+  255  tail -f Hello.txt 
+  256  crontab -e
+  257  tail -f Hello.txt 
+  258  sed -n '2p' test.txt
+  259  sed -n '2p'data1.txt
+  260  sed -n '2p' test.txt
+  261  ls
+  262  cat /etc/passwd
+  263  cat /etc/passwd >> Sed.txt
+  264  cat set.txt
+  265  cat sed.txt
+  266  cat ed.txt
+  267  cat Sed.txt
+  268  history
+  269  ls -ltr
+  270  Sed.txt | tr '[:space:]' '[:|:]'
+  271  Sed.txt | tr '[:space:]' '|'
+  272  cat Sed.txt | tr ':' '[:space:]' ' ' >> Sed1.txt
+  273  cat Sed.txt | tr ':' '[:space:]' >> Sed1.txt
+  274  cat Sed.txt | tr ':' ' ' >> Sed1.txt
+  275  cat Sed1.txt
+  276  cat Sed.txt | tr ':' '|' >> Sed1.txt
+  277  cat Sed.txt | tr ':' '|' >> Sed2.txt
+  278  cat Sed2.txt
+  279  sed -n '2p' Sed2.txt
+  280  awk '{print $2}' Sed2.txt
+  281  cat Sed.txt | tr ':' ' ' >> Sed3.txt
+  282  awk '{print $2}' Sed3.txt
+  283  awk '{print $3}' Sed3.txt
+  284  awk '{print $5}' Sed3.txt
+  285  awk '{print $1}' Sed3.txt
+  286  sed -n '$2' Sed2.txt
+  287  sed -n '2$' Sed2.txt
+  288  sed -n 'p2' Sed2.txt
+  289  sed -n 'p2' Sed3.txt
+  290  sed -n '3p' Sed3.txt
+  291  sudo su
+  292  cd ..
+  293  howwami
+  294  howami
+  295  whoami
+  296  alias ll= 'ls -ltr'
+  297  alias ll= 'ls -l'
+  298  alias ll= 'ls -ltr'
+  299  ls -ltralias ll= 'ls -ltr'
+  300  ls -ltr
+  301  alias ll ='ls -ltr'
+  302  alias ll='ls -ltr'
+  303  ll
+  304  gzip file1.txt
+  305  ls
+  306  unzip file1.txt
+  307  unzip file1.txt.gz
+  308  sudo install unzip
+  309  echo "this is f1" >> file1.txt
+  310  ls
+  311  find . -name file1.txt
+  312  find . -name *.txt
+  313  find . -name*.txt
+  314  find . -name "*.txt"
+  315  find . -name "file1.txt"
+  316  find . -iname "File*.txt"
+  317  find . -name "File*.txt"
+  318  mkdir file
+  319  ls
+  320  find . -iname "file1*" -type f
+  321  find . -iname "file1*"
+  322  cd Desktop/
+  323  ls
+  324  cd luckyday/
+  325  cd ~
+  326  cd luckyday/
+  327  ls
+  328  tar cvf file1.tar file1.txt
+  329  ls
+  330  ls -ltr
+  331  tar xvfz file1.tar
+  332  tar xvf file1.tar
+  333  ls
+  334  cat file1.txt
+  335  rm -rf file1.txt
+  336  tar xvf file1.txt
+  337  tar xvf file1.tar
+  338  ls
+  339  cat file1.txt
+  340  df 0hT
+  341  df -hT
+  342  pwd
+  343  cd ../
+  344  pwd
+  345  cd lucky
+  346  cd lucky newfolder
+  347  cp lucky newfolder
+  348  cp -r lucky newfolder
+  349  cp -r luckyday newfolder
+  350  mkdir folder
+  351  cp luckyday/*.* folder/
+  352  ls folder/
+  353  ls
+  354  cat newfolder
+  355  cd newfolder/
+  356  ls
+  357  cd ../
+  358  cd folder
+  359  ls
+  360  rm -I *.txt
+  361  cd ..
+  362  rm -I *.txt
+  363  ls
+  364  rm -d folder
+  365  rm -df folder
+  366  cd folder
+  367  ls
+  368  cd ../
+  369  ip a
+  370  ip -a
+  371  ip a
+  372  cat /etc/passwc
+  373  cat /etc/passwc/
+  374  cat /etc/passwd
+  375  cat -d ":"
+  376  cut -d ":" -f 1,6 /etc/passwd
+  377  less /etc/passwd
+  378  head /etc/passwd
+  379  head -n 12 /etc/passwd
+  380  tail /etc/passwd
+  381  top
+  382  find . -namr "*.*" exec grep "ERROR" {}\;
+  383  find . -name "*.*" exec grep "ERROR" {}\;
+  384  find . -name "*.*" -exec grep "ERROR" {}\;
+  385  find . -name "*.*" -exec grep "ERROR" {} \;
+  386  rm -rf file.txt 
+  387  ls
+  388  echo "this is f1" >> file1.txt
+  389  ls
+  390  echo "this is f2" >> file2.txt
+  391  mv file1.txt file2.txt
+  392  cat file2
+  393  cat file2.txt 
+  394  df -h
+  395  df -h | sort -k 1
+  396  df -h | sort -k 4
+  397  df -h | sort -k 4n
+  398  df -n | sort -k 4
+  399  df -h | sort -k 4
+  400  df -h |sort -k 4 -h
+  401  echo "a" >> data1.txt
+  402  echo "b" >> data1.txt
+  403  echo "c" >> data1.txt
+  404  echo "d" >> data1.txt
+  405  echo "o" >> data1.txt
+  406  sort data1.txt 
+  407  echo "p" >> data1.txt
+  408  echo "e" >> data1.txt
+  409  sort data1.txt 
+  410  sort -u data1.txt 
+  411  sort -r data1.txt 
+  412  sort -k 2 data1.txt 
+  413  cat data1.txt 
+  414  ps aux | grep 25103
+  415  ps aux | grep top
+  416  kill 25103
+  417  ip a
+  418  ls -ltr
+  419  find . -name downloads -mtime +7
+  420  find . -name Downloads -mtime +7
+  421  find . -name Downloads -mtime -7
+  422  find . -name Public -mtime -7
+  423  find . -name Public -mtime +7
+  424  echo "We are having trouble restoring your last browsing session. Select Restore Session to try again.Still not able to restore your session? Sometimes a tab is causing the issue. View previous tabs, remove the checkmark from the tabs you don’t need to recover, and then restore." >> test.txt
+  425  vi test.txt
+  426  ls
+  427  echo "Hii" >> test1.txt
+  428  vi test1.txt
+  429  vi test.txt
+  430  cat test.txt
+  431  clear
+  432  cat > file.txt
+  433  cat >file.txt
+  434  cat >file1.txt
+  435  cat file1.txt
+  436  cat >file1.txt
+  437  cat file1.txt
+  438  cat >>file1.txt
+  439  cat file1.txt
+  440  cat file.txt
+  441  cat >>file1.txt
+  442  cat file1.txt
+  443  cat file.txt file2.txt > file3.txt
+  444  cat file.txt file1.txt > file3.txt
+  445  cat file.txt
+  446  ls
+  447  cat file.txt
+  448  cat file1.txt
+  449  cat "Doojfngirn" >> file.txt
+  450  history
