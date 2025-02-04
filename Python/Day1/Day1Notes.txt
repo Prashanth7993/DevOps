@@ -1,1 +1,4 @@
 04/02/25
+1.What is python.
+    Advantages & DisAdvantages
+2.How it is Differnet From Other Language.
