@@ -1,0 +1,13 @@
+DSA
+    Sort(): It will sort the original list or array without creating a new list.
+    Sorted(): It will create new object or list or array and will sort.
+    
+    Summary of Techniques:
+    Method	    Modifies List?  	Complexity  	Best For
+    sorted()	    No	            O(n log n)	    Getting a new sorted list
+    .sort()	        Yes	            O(n log n)	    Sorting in place
+sorted(reverse=True) No	            O(n log n)	    Sorting in descending order
+.sort(reverse=True)	Yes	            O(n log n)	    In-place descending sort
+sorted(key=len)	    No	            O(n log n)	    Sorting by length
+sorted(key=str.lower)No	            O(n log n)	    Case-insensitive sorting
+sorted(key=custom_function)	No	    O(n log n)	    Custom sorting logic
