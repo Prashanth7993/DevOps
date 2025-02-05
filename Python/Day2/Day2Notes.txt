@@ -1,4 +1,4 @@
-DSA
+1.DSA
     Sort(): It will sort the original list or array without creating a new list.
     Sorted(): It will create new object or list or array and will sort.
     
@@ -11,3 +11,10 @@ sorted(reverse=True) No	            O(n log n)	    Sorting in descending order
 sorted(key=len)	    No	            O(n log n)	    Sorting by length
 sorted(key=str.lower)No	            O(n log n)	    Case-insensitive sorting
 sorted(key=custom_function)	No	    O(n log n)	    Custom sorting logic
+
+2.Functions
+3.Finding Reapting Char or num in the list or arr.
+4.Pop
+5.append
+6.insert
+
