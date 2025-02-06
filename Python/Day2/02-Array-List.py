@@ -22,6 +22,8 @@ print(mostReaptingElem(arr1))
 
 ##
 word_arr = ['abck','adef','fefwe','efwefe','sdfregr','srereger']
+var = 'ab' in word_arr
+print(var)
 print(word_arr[1:5])
 print(word_arr[1:-1])
 print(word_arr[::5])
