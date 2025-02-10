@@ -3,4 +3,4 @@
 2.Lambda Functions.
     02-LambdaFunctions.py
 3.HigherOrder Functions.
-    03-HigherOrderFunctions.py.
+    03-HigherOrderFunctions.py
