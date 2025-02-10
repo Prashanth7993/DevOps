@@ -1,0 +1,45 @@
+Introduction to Python programming, Why Python?, 
+Python Latest Version Installation, 
+Run Code in Python Terminal, 
+Write Code in a Text Editor,
+Practice in IDE (VS Code Setup & Run), 
+Work with Numbers, Strings & Variables, 
+Conditional Logic (if, elif, else), 
+Functions, Loops (while, for), 
+Import Libraries, 
+Troubleshooting Code, 
+Jupyter Notebooks, Handling Exceptions, Object-Oriented Concepts, Using Regular Expressions
+
+
+
+Python for DevOps-
+	Automating Files & Filesystem (os module, os.path, os.walk), 
+  Managing Files/Directories, 
+  Regular Expressions for Text Search,
+  Handling Large Files, 
+  Hashing with Hashlib, 
+  Encryption with Cryptography,
+  Introduction to Popular Python Libraries (Pandas, Selenium, Requests, Scapy, etc.), 
+  Python Virtual Environments, 
+  Python Collections (List, Set, Tuple), 
+  Unit Testing & Mocking (unittest, mock, pytest, fixtures)
+  
+  
+Install the latest version of Python and verify the installation.
+Write a simple Python script that prints "Hello, World!" to the console.
+Create a script to perform basic arithmetic operations (addition, subtraction, etc.).
+Write a program that uses conditional statements to check if a number is positive or negative.
+Define a function that takes a list and returns its sum.
+Create a for loop that prints numbers 1 to 10.
+Use Jupyter Notebooks to document a Python project with explanations.
+Implement error handling using try/except blocks.
+
+
+Write a script to automate file creation and deletion in a specified directory.
+Use the os module to list all files in a directory and display their sizes.
+Implement a regular expression to search for email addresses in a text file.
+Create a program that reads a large CSV file and processes its data.
+Write a hashing script using the hashlib library to secure passwords.
+Create a virtual environment, install a package, and save dependencies to requirements.txt.
+Implement unit tests for a sample function using the unittest framework.
+Mock a function in a unit test to simulate behavior without executing the actual code.
