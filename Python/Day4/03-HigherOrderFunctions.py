@@ -6,5 +6,5 @@ def Higher_orderFunction(f,lst): #f = Sum_num
     return var
 
 result = Higher_orderFunction(Sum_num,[1,2,3,4,5])
-# print(result)
+print(result)
 
