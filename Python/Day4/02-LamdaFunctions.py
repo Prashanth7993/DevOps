@@ -1,13 +1,13 @@
 def Sum(a,b):
     return a+b
-# print(Sum(2,4))
+print(Sum(2,4))
 
 #
 mySum = lambda a,b: a+b
-# print(mySum(2,10))
+print(mySum(2,10))
 
 #
-# print((lambda a,b: a+b) (2,4))
+print((lambda a,b: a+b) (2,4))
 
 #
 #Example of lambda function in another function
