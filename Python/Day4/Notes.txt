@@ -1,2 +1,6 @@
 1. list interpulation.
     01-LstComprehension.py
+2.Lambda Functions.
+    02-LambdaFunctions.py
+3.HigherOrder Functions.
+    03-HigherOrderFunctions.py
