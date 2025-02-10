@@ -1,0 +1,10 @@
+10/02/2025
+1.Creating a ec2 instance using python.
+2.Before Creating a ec2 instance automatic 
+    aws configuration rrequired
+        1.Security credentials
+        2.Create access key
+        3.Access key Id, Access ket password.
+        4.Region u want to create Ex: aa-north-x
+        5.Code Formate: JSON
+3.
