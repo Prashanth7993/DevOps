@@ -1,0 +1,9 @@
+Name, Email, Age, City, Occupation
+John Doe, johndoe@gmail.com, 28, New York, Software Engineer
+Jane Smith, janesmith@yahoo.com, 34, Los Angeles, Graphic Designer
+Alex Wilson, alex.wilson@outlook.com, 25, Chicago, Data Analyst
+Emily Johnson, emily.johnson@gmail.com, 30, San Francisco, Product Manager
+Robert Brown, robert.brown@protonmail.com, 40, Houston, Marketing Specialist
+Sophia Miller, sophia.miller@icloud.com, 27, Seattle, UX Designer
+Michael Davis, michael.davis@company.com, 35, Boston, Financial Advisor
+Olivia White, olivia.white@gmail.com, 29, Miami, Content Writer
