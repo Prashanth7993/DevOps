@@ -13,5 +13,3 @@ except ZeroDivisionError:
 
 finally:
     print("this block wil always print")
-
-
