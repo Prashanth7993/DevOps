@@ -1,0 +1,37 @@
+Name,Age,City,Salary,Department
+Alice,25,New York,60000,Sales
+Bob,30,London,75000,Marketing
+Charlie,28,Paris,68000,Engineering
+David,35,Tokyo,90000,Engineering
+Eve,22,Sydney,55000,Sales
+Frank,40,Chicago,85000,Marketing
+Grace,32,San Francisco,78000,Engineering
+Henry,27,Berlin,62000,Sales
+Ivy,38,Mumbai,95000,Marketing
+Jack,29,Toronto,70000,Engineering
+Kelly,31,Los Angeles,80000,Sales
+Liam,36,Dubai,92000,Marketing
+Mia,24,Sao Paulo,58000,Engineering
+Noah,33,Mexico City,72000,Sales
+Olivia,26,Johannesburg,65000,Marketing
+Paul,39,Rome,88000,Engineering
+Quinn,37,Madrid,82000,Sales
+Ryan,34,Amsterdam,75000,Marketing
+Sophia,23,Buenos Aires,60000,Engineering
+Thomas,41,Vienna,98000,Sales
+Uma,30,Stockholm,72000,Marketing
+Victor,28,Copenhagen,67000,Engineering
+Wendy,35,Helsinki,85000,Sales
+Xavier,27,Oslo,63000,Marketing
+Yara,32,Dublin,78000,Engineering
+Zack,39,Prague,91000,Sales
+Alice,25,New York,60000,Sales  # Duplicate row
+Bob,30,London,75000,Marketing # Duplicate row
+Charlie,28,Paris,68000,Engineering # Duplicate row
+David,35,Tokyo,90000,Engineering # Duplicate row
+Eve,22,Sydney,55000,Sales # Duplicate row
+Frank,40,Chicago,85000,Marketing # Duplicate row
+Grace,32,San Francisco,78000,Engineering # Duplicate row
+Henry,27,Berlin,62000,Sales # Duplicate row
+Ivy,38,Mumbai,95000,Marketing # Duplicate row
+Jack,29,Toronto,70000,Engineering # Duplicate row
