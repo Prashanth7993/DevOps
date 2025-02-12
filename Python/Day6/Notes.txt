@@ -1,0 +1,6 @@
+OOPS:
+    1.Creation of our own class.
+
+Assignment:
+    create a shell script file to  automate the process creating an 
+    virtual environment and run the requirement.txt file and lauch the application
