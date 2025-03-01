@@ -11,8 +11,4 @@
     1.Copy the ami Id
     2.Instance type ( which instance you prefer)
     3.Keyname from aws console after creating a key pair in same location where you created ec2 instance.
-
-
-    
-
 4. Run the file. 
