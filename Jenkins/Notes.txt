@@ -1,0 +1,107 @@
+pipeline {
+    <-> decarative pipeline
+}
+
+agent any
+    or
+agent {label    "SlaveNodeLabelName" }> on which node need to build the job
+
+tools ->  install tools
+
+stages -> stage -> steps -> echo 'hello worl'
+
+duplcate stages not allowed 
+    stages{
+
+    }
+    stages{
+
+    }
+stage can be duplicate 
+    stage{
+
+    }
+    stage{
+
+    }
+
+
+We can easily mention for different steps with different slave 
+    stage{
+        agent any
+        steps{
+            echo "Hello world"
+        }
+    }
+
+-----------------------------------
+
+Variables:
+    When we want to pass some variables to the stages or steps we can directly pass through
+    environment variables
+
+    Two types of variables
+        Global variables at pipelevel
+        Stage variblae at stage level
+    
+
+    Access of Variables
+        in scripted we need to use $env.variablename or inside the steps we use ${variable_holder}
+        in declarative pipeline we can directly use $variablename
+
+    // Do not use " for command methods like sh, bat, powershell, pwsh, etc.
+    // Use ' to avoid groovy interpolation and command injection vulnerabilities.
+    
+
+    Syntax:
+
+        #Global level Variables
+        environment{
+           variable_holder = "value"
+        }
+
+
+        #Stage level Variables 
+        stage{
+            environment{
+                variable_holder = "value"
+            }
+            steps{
+                echo "Hello world"
+            }
+        }
+    
+    We can pass the confidential credentials by
+    Syntax:
+        environment{
+            MyUserPass = credentials("Id name from credentials")
+        }
+
+        sh 'echo $MyUserPass'
+        sh 'logintest --username $MYUSERPASS_USR --password $MYUSERPASS_PSW'
+
+
+
+    #--------------
+    we can pass parameters using parameters block
+    parameters {
+        booleanParam(name: "TEST_BOOLEAN", defaultValue: true, description: "Sample boolean parameter")
+        string(name: "TEST_STRING", defaultValue: "ssbostan", trim: true, description: "Sample string parameter")
+        text(name: "TEST_TEXT", defaultValue: "Jenkins Pipeline Tutorial", description: "Sample multi-line text parameter")
+        password(name: "TEST_PASSWORD", defaultValue: "SECRET", description: "Sample password parameter")
+        choice(name: "TEST_CHOICE", choices: ["production", "staging", "development"], description: "Sample multi-choice parameter")
+    }
+
+    parametername()
+        name: "xxxxxx",
+        description: "",
+        defaultValue: ""
+        #--------------
+        choice : ["xxxxx","xxxxxx","xxxxxxxx"]
+    these are seperated by comma ,
+
+    how to access the parameters variables:
+        echo "Hello $params.Name"
+            ex :
+                echo "Hello $params.TEST_STRING"
+
