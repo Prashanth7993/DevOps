@@ -51,11 +51,8 @@ React (Frontend) → Spring Boot (Backend) → MySQL (Database)
 
 ## Repository
 
-[GitHub Repository](YOUR_REPOSITORY_LINK_HERE)
+[Project-d1](https://github.com/PRASHANTH7993/Project-d1)
 
 ## Author
 
-Developed and maintained by **[Your Name]**.
-
-
-
+Developed and maintained by **[Prashanth J]**.
