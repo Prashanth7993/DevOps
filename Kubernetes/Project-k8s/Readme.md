@@ -13,6 +13,8 @@ This project is an **Event Management System** deployed using **Kubernetes** on 
 
 - **Kubernetes Cluster** (Manages deployments using LoadBalancer for external access)
 
+- **Docker Containers** (Encapsulates the application for easy deployment)
+
 - **CI/CD Pipeline** (Automates build, testing, and deployment)
 
 ## Architecture
@@ -31,11 +33,21 @@ React (Frontend) → Spring Boot (Backend) → MySQL (Database)
 
 - **Database:** MySQL
 
+- **Containerization:** Docker
+
 - **Deployment:** Kubernetes (LoadBalancer Service)
 
 - **Cloud Provider:** AWS EC2
 
 - **CI/CD:** Jenkins, GitHub Actions
+
+## Docker Integration
+
+- The project includes **Dockerfiles** for both frontend and backend services.
+
+- Docker images are built and pushed to a container registry (e.g., Docker Hub or AWS ECR).
+
+- Kubernetes pulls the latest images from the registry during deployment.
 
 ## AWS Configuration
 
@@ -47,12 +59,21 @@ React (Frontend) → Spring Boot (Backend) → MySQL (Database)
 
 - **Jenkins & GitHub Actions** automate build, test, and deployment.
 
+- **Docker images** are built and pushed automatically.
+
 - **Triggers:** Any commit to the main branch automatically redeploys the application.
 
 ## Repository
 
-[Project-d1](https://github.com/PRASHANTH7993/Project-1)
+[GitHub Repository](https://github.com/PRASHANTH7993/Project-d1.git)
 
-## Authr
+## Author
 
 Developed and maintained by **Prashanth J**.
+
+
+
+
+
+
+
